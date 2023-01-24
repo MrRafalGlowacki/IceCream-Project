@@ -1,0 +1,96 @@
+.modal-buy {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+
+    &__content {
+        background-color: getColor("main-color");
+        margin: auto;
+        padding: 20px;
+        border-radius: 15px;
+        width: 80%;
+        max-width: 600px;
+        min-height: 650px;
+    }
+
+    &__close {
+        color: getColor("basic-color");
+        float: right;
+        font-size: 52px;
+        transition: transform 250ms ease-in-out;
+
+        &:hover, &:focus {
+            color: getColor("button-hover");
+            text-decoration: none;
+            cursor: pointer;
+            transform: rotate(-180deg);
+        }
+    }
+
+    &__title {
+        font-family: 'Titan One';
+        font-size: 28px;
+        line-height: 66px;
+        text-align: center;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: getColor("title-color");
+        padding-top: 60px;
+    }
+
+    &__label {
+        color: getColor("basic-color");
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    &__input[type=text], &__select, &__textarea {
+        width: 100%;
+        padding: 12px;
+        border-radius: 15px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+        border: 0;
+        outline: 0;
+    }
+
+    &__btn {
+        font-family: 'DM Sans';
+        border: none;
+        padding: 10px 40px;
+        border-radius: 20px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.25;
+        letter-spacing: 0em;
+        text-align: center;
+        color: getColor("button-color");
+        background-color: getColor("basic-color");
+
+        &:hover {
+            background-color: getColor("button-hover");
+        }
+        
+        &-box {
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+        }
+    }
+
+    &__container {
+        border-radius: 15px;
+        background-color: getColor("main-color");
+        padding: 20px;
+    }
+}
